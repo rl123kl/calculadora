@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+ 
+ <title>my calculadora</title>
+ 
+<script>
+
+function calcula(operacion){
+    var operando1 = document.calc.operando1.value;
+    var operando2 = document.calc.operando2.value;
+    var result = 0;
+    if ( operacion=='/' ){
+      result =(operando1 / operando2);
+    }else{
+    if (operacion=='+') {
+      result =((operando1)-(-operando2));
+    }else{
+    if (operacion=='-'){
+      result =(operando1 - operando2);
+    }else{
+    if (operacion=='*'){
+      result =(operando1 * operando2);
+    }else{
+    if (operacion=='^'){
+       result = operando1 * operando1;    
+    }else{
+    if (operacion=='R'){
+       result =Math.sqrt(operando1);    
+    } else{ 
+    if (operacion=='S'){
+       result = Math.sin(operando1);    
+    }else{
+    if (operacion=='C'){
+       result = Math.cos(operando1);    
+    }else{
+    if (operacion=='T'){
+       result =Math.tan(operando1);    
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    document.calc.resultado.value = result;
+}
+</script> 
+ 
+</head>
+<body>
+ 
+<form name="calc">
+    <div id="cabesera">
+        <div id="titulo">
+            <h1>MY CALCULADORA</h1>
+        </div>
+    </div>
+<center>
+<div aling="center">
+<table cellPadding="5" border="5" cellspacing="10" id="formulario">
+<tr>
+    <td><input type="Text" name="operando1" value="0" size="12"></td>
+    <td><input type="Text" name="operando2" value="0" size="12"></td>
+</tr>
+
+
+<tr>
+<td><input type="Button" name="" value=" + " onclick="calcula('+')"></td>
+<td><input type="Button" name="" value=" - " onclick="calcula('-')"></td>
+<td><input type="Button" name="" value=" X " onclick="calcula('*')"></td>
+<td><input type="Button" name="" value=" / " onclick="calcula('/')"></td>
+<td><input type="Button" name="" value=" x^2 " onclick="calcula('^')"></td>
+</tr>
+<tr>
+<td><input type="Button" name="" value="&#8730;" onclick="calcula('R')"></td>
+<td><input type="Button" name="" value=" sin " onclick="calcula('S')"></td>
+<td><input type="Button" name="" value=" cos " onclick="calcula('C')"></td>
+<td><input type="Button" name="" value=" tan " onclick="calcula('T')"></td>
+</tr>
+<tr>
+<td colSpan="6">Resultado:<input type="Text" name="resultado" value="0" size="12"></td>
+</tr>
+
+</table>
+</div>
+</center>
+</form> 
+ 
+</body>
+</html>

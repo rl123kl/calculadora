@@ -1,0 +1,16 @@
+body{
+    background: rgb(71, 192, 71);
+}
+
+#cabesera{
+height: 60px;
+background: rgb(66, 33, 3);
+}
+#titulo{
+padding-left: 30em;
+color: white;
+}
+
+#formulario{
+    background: rgb(44, 43, 43);
+}
